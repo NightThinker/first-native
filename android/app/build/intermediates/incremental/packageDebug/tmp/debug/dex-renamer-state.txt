@@ -1,0 +1,4 @@
+#Thu Jul 19 15:27:19 ICT 2018
+base.0=/Users/hdt/Documents/project/native/my-first-app/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex
