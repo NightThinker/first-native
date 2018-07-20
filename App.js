@@ -14,13 +14,16 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TextInput 
-          style={{width: 300}}
-          placeholder='An awesome place'
-          value={this.state.placeName} 
-          onChangeText={this.placeNameChangeHandler}/>
-        <Button 
-          title='Add'/>
+        <View style={styles.inpitContainer}>
+          <TextInput 
+            placeholder='An awesome place'
+            value={this.state.placeName} 
+            onChangeText={this.placeNameChangeHandler}
+            style={styles.placeInput} />
+          <Button 
+            title='Add'
+            style={styles.placeButton}/>
+        </View>
       </View>
     );
   }
@@ -34,4 +37,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  inpitContainer: {
+    // flex: 1,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  placeInput: {
+    width: '70%'
+  },
+  placeButton: {
+    width: '30%'
+  }
 });
