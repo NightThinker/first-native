@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default class App extends React.Component {
 
@@ -14,11 +14,13 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working test 2!</Text>
         <TextInput 
-          style={{width: 300,borderColor: 'black', borderWidth: 1}}
+          style={{width: 300}}
+          placeholder='An awesome place'
           value={this.state.placeName} 
           onChangeText={this.placeNameChangeHandler}/>
+        <Button 
+          title='Add'/>
       </View>
     );
   }
@@ -27,8 +29,9 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 26,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
 });
