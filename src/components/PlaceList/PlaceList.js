@@ -5,7 +5,10 @@ import ListItem from '../ListItem/ListItem';
 
 const placeList = (props) => {
     const placesOutput = props.places.map((item,index) => (
-        <ListItem key={index} placeName={item} onItemPressed={() => alert('ID : ' + index)}/>
+        <ListItem 
+            key={index} 
+            placeName={item} 
+            onItemPressed={() => props.onItemDeleted(index)}/>
     ))
     return (
         <View style={styles.listContainer}>
